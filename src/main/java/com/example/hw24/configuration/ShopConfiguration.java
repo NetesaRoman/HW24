@@ -1,5 +1,6 @@
 package com.example.hw24.configuration;
 
+import com.example.hw24.controller.MainController;
 import com.example.hw24.model.Product;
 import com.example.hw24.repositories.OrderRepository;
 import com.example.hw24.repositories.ProductRepository;
@@ -64,5 +65,8 @@ public class ShopConfiguration {
     public OrderRepository orderRepository(){
         return new OrderRepository(new ArrayList<>());
     }
+
+    @Bean
+    public MainController mainController(){return new MainController();}
 
 }
